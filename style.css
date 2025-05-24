@@ -1,3 +1,77 @@
 body{
-    background-color: aqua;
+    font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+.container{
+  display: grid;
+  grid-template-rows: 400px;
+  grid-template-columns: 1fr;
+
+}
+
+.box1{
+  background-image: url("./assets/6229861.jpg");
+  border-radius: 10px;
+  
+} 
+
+.typewriter {
+  padding-top: 120px;
+  padding-left: 1000px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .015em; /* Adjust as needed */
+  font-weight: 800;
+  font-size: 50px
+}
+
+
+.new{
+  color: whitesmoke;
+  padding-left: 900px;
+  z-index: 2;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+
+.icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: .75rem;
+}
+
+.bg-body-secondary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-secondary-bg-rgb), var(--bs-bg-opacity)) !important;
+}
+.text-body-emphasis {
+    --bs-text-opacity: 1;
+    color: var(--bs-emphasis-color) !important;
+}
+
+.carou-1{
+  text-align: center;
+  font-size: 80px
 }
