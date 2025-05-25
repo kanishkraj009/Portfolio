@@ -11,49 +11,58 @@ body{
 
 }
 
-.box1{
+.box1 {
   background-image: url("./assets/6229861.jpg");
+  background-size: cover;
+  background-position: top;
   border-radius: 10px;
-  
-} 
-
-.typewriter {
-  padding-top: 120px;
-  padding-left: 1000px;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .015em; /* Adjust as needed */
-  font-weight: 800;
-  font-size: 50px
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-.new{
+/* Typewriter container */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: .015em;
+  font-weight: 800;
+  font-size: 3rem;
   color: whitesmoke;
-  padding-left: 900px;
-  z-index: 2;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
+  border-right: .15em solid orange;
   animation: 
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
 }
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+/* Responsive font scaling */
+@media (max-width: 768px) {
+  .typewriter {
+    font-size: 2rem;
+  }
 }
 
-/* The typewriter cursor effect */
+@media (max-width: 480px) {
+  .typewriter {
+    font-size: 1.5rem;
+  }
+  .new{
+    color: rgb(240, 207, 86);
+  }
+}
+
+/* Typing keyframes */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 40% }
+}
+
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
 }
+
 
 
 .icon-square {
